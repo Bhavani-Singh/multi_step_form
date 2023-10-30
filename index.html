@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar start -->
+
+  <div class="sidebar">
+    <div class="step" id="step-1-button">Step 1<br>Your info</div>
+    <div class="step" id="step-2-button">Step 2<br>Select plan</div>
+    <div class="step" id="step-3-button">Step 3<br>Add-ons</div>
+    <div class="step" id="step-4-button">Step 4<br>Summary</div>
+  </div>
+
+  <!-- Sidebar end -->
+
+  <div class="step-container" id="step-1">
+    <h1>Personal info</h1>
+    <p>Please provide your name, email address, and phone number.</p>
+    <form id="step-1-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="e.g. Stephen King" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
+      <label for "phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" required>
+      <button id="step-1-next">Next Step</button>
+    </form>
+  </div>
+
+  <div class="step-container" id="step-2">
+    <h1>Select your plan</h1>
+    <p>You have the option of monthly or yearly billing.</p>
+    <form id="step-2-form">
+      <div class="plan-options">
+        <div class="plan">
+          <input type="radio" name="plan" id="monthly" value="9" required>
+          <label for="monthly">Monthly</label>
+        </div>
+        <div class="plan">
+          <input type="radio" name="plan" id="yearly" value="108" required>
+          <label for="yearly">Yearly</label>
+        </div>
+      </div>
+      <button id="step-2-back">Go Back</button>
+      <button id="step-2-next">Next Step</button>
+    </form>
+  </div>
+ 
+
+  <div class="step-container" id="step-3">
+    <h1>Pick add-ons</h1>
+    <p>Add-ons help enhance your gaming experience.</p>
+    <form id="step-3-form">
+      <div class="addon">
+        <input type="checkbox" id="online-service" value="1">
+        <label for="online-service">Online service<br>Access to multiplayer games<br>+$1/mo</label>
+      </div>
+      <div class="addon">
+        <input type="checkbox" id="larger-storage" value="2">
+        <label for="larger-storage">Larger storage<br>Extra 1TB of cloud save<br>+$2/mo</label>
+      </div>
+      <div class="addon">
+        <input type="checkbox" id="custom-profile" value="2">
+        <label for="custom-profile">Customizable Profile<br>Custom theme on your profile<br>+$2/mo</label>
+      </div>
+      <button id="step-3-back">Go Back</button>
+      <button id="step-3-next">Next Step</button>
+    </form>
+  </div>
+
+  <div class="step-container" id="step-4">
+    <h1>Finishing up</h1>
+    <p>Double-check everything looks OK before confirming.</p>
+    <div id="summary">
+      <!-- Dynamically add subscription and add-on selections here -->
+    </div>
+    <p>Total (per month/year)</p>
+    <button id="step-4-back">Go Back</button>
+    <button id="step-4-confirm">Confirm</button>
+  </div>
+
+  <div class="step-container">
+    <div class="step-content">
+      <h1>Thank you!</h1>
+      <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+    </div>
+  </div>
+  
+
+  <script src="action.js"></script>
+</body>
+</html>

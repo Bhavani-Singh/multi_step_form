@@ -1,0 +1,125 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(229, 24%, 87%);
+  }
+  
+  .sidebar {
+    background-color: hsl(243, 100%, 62%);
+    color: white;
+    width: 200px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .step {
+    margin: 10px 0;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .step-container {
+    margin: 20px 220px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px hsl(0, 0%, 0%, 0.1);
+  }
+  
+  .step-content h1 {
+    color: hsl(213, 96%, 18%);
+  }
+  
+  .step-content p {
+    color: hsl(231, 11%, 63%);
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 4px;
+  }
+  
+  button {
+    display: inline-block;
+    background-color: hsl(213, 96%, 18%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 10px;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .plan-options {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .addon {
+    display: flex;
+    margin: 10px 0;
+  }
+  
+  #summary {
+    background-color: hsl(228, 100%, 84%);
+    padding: 10px;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
+  
+  /* Add media queries for responsive design based on screen width */
+  
+  @media (max-width: 375px) {
+    .sidebar {
+      width: 100%;
+      padding: 10px;
+      position: static;
+        display: flex;
+        justify-content: space-between;
+    }
+  
+    .step-container {
+      margin: 10px;
+      padding: 10px;
+    }
+  }
+  
+  @media (min-width: 376px) {
+    .sidebar {
+      position: fixed;
+    }
+  }
+  @media (min-width: 1440px) {
+    .step-container {
+      margin: 20px auto;
+      max-width: 800px;
+    }
+  }
